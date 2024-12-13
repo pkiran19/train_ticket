@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Train Ticket Registration</h1>
+        <form id="trainForm" method="POST" action="process.php">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            
+            <label for="trainNumber">Train Number:</label>
+            <select id="trainNumber" name="train_number" required>
+                <option value="12001">Rajdhani Express (12001)</option>
+                <option value="12651">Shatabdi Express (12651)</option>
+                <option value="12801">Duronto Express (12801)</option>
+                <option value="11001">Deccan Queen (11001)</option>
+                <option value="15051">Superfast Express (15051)</option>
+                <option value="16511">Mysuru Express (16511)</option>
+                <option value="12805">Howrah Mail (12805)</option>
+                <option value="15631">Avadh Express (15631)</option>
+                <option value="12951">Golden Temple Mail (12951)</option>
+                <option value="16501">Kochuveli Express (16501)</option>
+            </select>
+
+            
+            <label for="berthPreference">Berth Preference:</label>
+            <select id="berthPreference" name="berth_preference" required>
+                <option value="Upper">Upper</option>
+                <option value="Middle">Middle</option>
+                <option value="Lower">Lower</option>
+                <option value="Side Upper">Side Upper</option>
+                <option value="Side Lower">Side Lower</option>
+            </select>
+            
+            <label for="numPassengers">Number of Passengers:</label>
+            <input type="number" id="numPassengers" name="num_passengers" min="1" required>
+            
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" name="travel_date" required>
+            
+            <button type="submit">Book Ticket</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
